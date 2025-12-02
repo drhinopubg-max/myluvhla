@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Don't Be Sad, Baby 💐</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Baby</title>
+  <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(135deg, #ffd6e8, #ffeef6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        text-align: center;
-        color: #444;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
     }
     .card {
-        background: white;
-        padding: 30px;
-        border-radius: 25px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        max-width: 400px;
-        animation: fadeIn 1.2s ease;
+      background: white;
+      width: 340px;
+      padding: 25px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
     }
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px);} 
-        to { opacity: 1; transform: translateY(0);} 
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .title {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        color: #ff5fa2;
+    .her-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff99c8;
+      margin-bottom: 15px;
     }
-    .subtitle {
-        font-size: 16px;
-        margin-bottom: 20px;
+    h2 {
+      color: #ff5fa2;
+      margin: 0;
+      font-size: 1.4rem;
     }
-    .flowers {
-        width: 150px;
-        margin: 0 auto 20px;
-        animation: float 2s infinite ease-in-out;
+    p {
+      color: #444;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    .bouquet {
+      width: 130px;
+      animation: float 3s infinite ease-in-out;
+      margin-top: 20px;
     }
     @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
     }
-    .gf-photo {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid #ff8fbc;
-        margin-bottom: 15px;
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff8fbc;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 15px rgba(255,0,100,0.2);
     }
-</style>
+    .btn:hover {
+      background: #ff6fae;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <img id="gfPhoto" class="gf-photo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAgACAYAAADg0fg2AAAQAElEQVR4Aez9Cbs...a/ELzpvykE2pyC92udi++//o/GvduCXXKfMZ21dc1bP8V/2tfELf/e3xr9S4Zd+"+ "" alt="Your Photo" />
+  <div class="card">
+    <img src="https://imgur.com/qQ3N0Ps" class="her-photo" alt="Her Photo" />
 
-        <img class="flowers" src="https://i.imgur.com/7aZ8k8C.png" alt="Flowers" />
+    <h2>Come on baby, don't be sad ❤️</h2>
+    <p>Here’s a bouquet just for you… because you deserve all the love and smiles.</p>
 
-        <div class="title">Come on baby, don't be sad 💖</div>
-        <div class="subtitle">This bouquet is just for you. You're too special to feel down.</div>
+    <img class="bouquet" src="https://i.imgur.com/VV7G9Fz.png" alt="Bouquet" />
 
-        <input type="file" accept="image/*" id="upload" />
-        <p style="font-size: 12px; color: #888; margin-top: 5px;">Upload her photo here 💗</p>
-    </div>
-
-<script>
-    const upload = document.getElementById("upload");
-    const gfPhoto = document.getElementById("gfPhoto");
-
-    upload.addEventListener("change", function () {
-        const file = this.files[0];
-        if (file) {
-            gfPhoto.src = URL.createObjectURL(file);
-        }
-    });
-</script>
+    <button class="btn">I Love You 💗</button>
+  </div>
 </body>
 </html>
