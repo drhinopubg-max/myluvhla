@@ -1,148 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Baby ♡</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap');
-
-        body, html {
-            margin: 0; padding: 0; height: 100%;
-            background: linear-gradient(135deg, #ffeef8, #ffccf2, #e0f8ff);
-            overflow: hidden;
-            font-family: 'Dancing Script', cursive;
-            color: #ff6bcb;
-        }
-        .container {
-            text-align: center;
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            color: #ff6bcb;
-            text-shadow: 0 0 20px rgba(255,107,203,0.5);
-        }
-        .message {
-            font-size: 2rem;
-            margin: 20px;
-            opacity: 0;
-            animation: fadeIn 2s forwards 2s;
-        }
-        .photo-frame {
-            width: 280px; height: 280px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 12px solid #fff;
-            box-shadow: 0 20px 40px rgba(255,107,203,0.4);
-            margin: 30px;
-            opacity: 0;
-            transform: scale(0.8);
-            animation: popIn 1.5s forwards 1s;
-        }
-        .photo-frame img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-        .bouquet {
-            position: relative;
-            width: 300px;
-            height: 350px;
-            margin: 40px 0;
-        }
-        .flower {
-            position: absolute;
-            font-size: 4rem;
-            opacity: 0;
-            transform: translateY(100px);
-            animation: growFlower 1.8s forwards;
-        }
-        .petals {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-        }
-        .petal {
-            position: absolute;
-            font-size: 1.5rem;
-            animation: fall linear infinite;
-        }
-        @keyframes growFlower {
-            to { opacity: 1; transform: translateY(0) rotate(0deg); }
-        }
-        @keyframes popIn {
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-        @keyframes fall {
-            to { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-        .heart { color: #ff6bcb; font-size: 2.5rem; animation: pulse 1.5s infinite; }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.3); }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Don't Be Sad, Baby 💐</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        color: #444;
+    }
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 25px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        max-width: 400px;
+        animation: fadeIn 1.2s ease;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px);} 
+        to { opacity: 1; transform: translateY(0);} 
+    }
+    .title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #ff5fa2;
+    }
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .flowers {
+        width: 150px;
+        margin: 0 auto 20px;
+        animation: float 2s infinite ease-in-out;
+    }
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+    .gf-photo {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #ff8fbc;
+        margin-bottom: 15px;
+    }
+</style>
 </head>
 <body>
+    <div class="card">
+        <img id="gfPhoto" class="gf-photo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAgACAYAAADg0fg2AAAQAElEQVR4Aez9Cbs...a/ELzpvykE2pyC92udi++//o/GvduCXXKfMZ21dc1bP8V/2tfELf/e3xr9S4Zd+"+ "" alt="Your Photo" />
 
-<div class="container">
-    <h1>For My Beautiful Baby ♡</h1>
+        <img class="flowers" src="https://i.imgur.com/7aZ8k8C.png" alt="Flowers" />
 
-    <div class="photo-frame">
-        <img src="https://ibb.co/HLHWRW5m" alt="My love"> <!-- change to her.png if needed -->
+        <div class="title">Come on baby, don't be sad 💖</div>
+        <div class="subtitle">This bouquet is just for you. You're too special to feel down.</div>
+
+        <input type="file" accept="image/*" id="upload" />
+        <p style="font-size: 12px; color: #888; margin-top: 5px;">Upload her photo here 💗</p>
     </div>
-
-    <div class="message">
-        Come on baby, don’t be sad :( <br>
-        Here’s a whole bouquet just for you! 🌸💐
-    </div>
-
-    <div class="bouquet" id="bouquet"></div>
-
-    <p style="font-size:2rem; margin-top:30px; opacity:0; animation: fadeIn 2s forwards 4s;">
-        I love you more than anything in this world <span class="heart">♡</span><br>
-        ~ Your Sing Sing
-    </p>
-</div>
-
-<div class="petals" id="petals"></div>
 
 <script>
-    // Create bouquet
-    const flowers = ['🌷'];
-    const bouquet = document.getElementById('bouquet');
-    for(let i = 0; i < 18; i++) {
-        const f = document.createElement('div');
-        f.className = 'flower';
-        f.style.left = Math.random() * 260 + 'px';
-        f.style.bottom = Math.random() * 80 + 'px';
-        f.style.animationDelay = i * 0.2 + 's';
-        f.textContent = flowers[Math.floor(Math.random()*flowers.length)];
-        bouquet.appendChild(f);
-    }
+    const upload = document.getElementById("upload");
+    const gfPhoto = document.getElementById("gfPhoto");
 
-    // Falling petals
-    const petals = document.getElementById('petals');
-    setInterval(() => {
-        const p = document.createElement('div');
-        p.className = 'petal';
-        p.textContent = ['🌸','🌺','🌷','🩷'][Math.floor(Math.random()*4)];
-        p.style.left = Math.random() * 100 + 'vw';
-        p.style.animationDuration = Math.random() * 5 + 5 + 's';
-        petals.appendChild(p);
-        setTimeout(() => p.remove(), 10000);
-    }, 300);
+    upload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            gfPhoto.src = URL.createObjectURL(file);
+        }
+    });
 </script>
-
 </body>
 </html>
